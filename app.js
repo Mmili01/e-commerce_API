@@ -14,6 +14,7 @@ const connectDB = require('./db/connect')
 
 //routers
  const authRouter = require('./routes/authRoute')
+ const userRouter = require('./routes/userRoute')
 
 //middleware
 const notFoundMiddleware = require('./middleware/not-found')
@@ -29,6 +30,9 @@ app.get ('/',(req,res)=>{
 })
 
 app.use( '/api/v1/authRouter',  authRouter)
+
+app.use( '/api/v1/users',  userRouter)
+
 
 
 app.use(notFoundMiddleware)
