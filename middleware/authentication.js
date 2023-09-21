@@ -16,8 +16,12 @@ const authenticateUser = async (req, res, next) => {
   }
 };
 const authorizePermissions = (...roles) => {
+//   console.log(roles)
   return (res, req, next) => {
-    if (!roles.includes(req.user.roles)) {
+    // console.log(req)
+
+    if (!roles.includes(req.user.role)) {
+
       throw new CustomError.UnauthorisedError("Just dey play");
     }
     next();

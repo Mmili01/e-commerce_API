@@ -14,10 +14,12 @@ const createJWT = ({ payload }) => {
 const isTokenValid = ({ token }) => {
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        // console.log(decoded)
         return decoded;
     } catch (error) {
         return null; // or handle the error in your specific way
     }
+
 };
 
 
