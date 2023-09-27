@@ -217,6 +217,9 @@
 
 - [] if some question, re-watch 07-file-upload
 - [] images folder with two images
+- [] setup the public folder
+- [] create the uploads folder
+- [] install express file upload and require it in the app.js
 
 #### Review Model
 
